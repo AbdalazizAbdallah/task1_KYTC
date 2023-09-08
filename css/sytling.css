@@ -40,7 +40,7 @@ header .container {
 .landing {
     background-image: url('../images/langscape.jpg');
     background-size: cover;
-    height: calc(100% - 64px);
+    height:  100%;
     position: relative;
 }
 
@@ -76,6 +76,7 @@ header .container {
 
 header {
     height: 600px;
+    overflow: hidden;
 }
 
 header .container .logo {
