@@ -1,0 +1,211 @@
+/* @font-face {
+    font-family: 'myfont';
+    src: url('myfont.woff');
+}
+ */
+
+:root{
+    --main-color : #10cab7;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.parnet {
+    background-color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 600px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.landing {
+    background-image: url('../images/langscape.jpg');
+    background-size: cover;
+    height: calc(100% - 64px);
+    position: relative;
+}
+
+.layer {
+    background-color: #f6bda84a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.landing .intro_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.landing .intro_text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.landing .intro_text p {
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+
+header {
+    height: 600px;
+}
+
+header .container .logo {
+    width: 60px;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .links .icon span {
+    background-color: black;
+    margin-bottom: 5px;
+    height: 2px;
+}
+
+header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header .links .icon span:first-child {
+    width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+}
+
+header .links .icon span:nth-child(3) {
+    width: 100%;
+}
+
+
+header .links nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+header .links nav a:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+
+header .links nav a:hover {
+    padding-left: 25px;
+}
+
+header .links nav {
+    top: calc(100% + 20px);
+    min-width: 200px;
+    background-color: rgb(249 249 249);
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 1;
+}
+
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+header .links:hover nav {
+    display: block;
+}
+
+header .links nav::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(249 249 249) transparent;
+    top: -20px;
+    right: 5px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+/* // X-Small devices (portrait phones, less than 576px) */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        width: 600px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        width: 1360px;
+    }
+}
